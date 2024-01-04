@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.118.2">
+    <title>Segitiga Kalkulator</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/navbar-fixed/">
+
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class=" position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 d-flex align-items-center"
+              type="button"
+              aria-expanded="false"
+              onclick="resetForm()">
+              Reset
+      </button>
+    </div>
+
+    <div class="container">
+      <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+        <h1 class="display-4 fw-normal text-body-emphasis">Kalkulator Segitiga</h1>
+        <p class="fs-5 text-body-secondary">Ini adalah sebuah website perhitungan keliling dan luas kalkulator dengan menggunakan html, css, dan javascript.</p>
+      </div>
+      <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="button" onclick="showContent('keliling')">Keliling</button>
+        <button class="btn btn-primary" type="button" onclick="showContent('luas')">Luas</button>
+      </div>
+    </div>
+
+<main class="container mt-3">
+  <div class="bg-body-tertiary p-5 rounded">
+    
+    <div id="content"></div>
+      <div id="kelilingContent">
+        <!-- Konten untuk Keliling -->
+        <div class="text-center">
+          <h1>Keliling Segitiga</h1>
+          <img src="segitiga.png" class="rounded m-3" alt="..." width=100>
+        </div>
+        <p>Rumus keliling segitiga adalah </p>
+        <h5 class="text-center">K = S1 + S2 + S3</h5>
+        <p>Dimana</p>
+        <p>K = Keliling</p>
+        <p>S1 = Sisi A</p>
+        <p>S2 = Sisi B</p>
+        <p>S3 = Sisi C</p>
+        
+        <div class="calculator">
+          <!-- Your calculator form goes here -->
+          <form>
+            <!-- Input fields for triangle dimensions -->
+            <label for="sideA">Side A:</label>
+            <input class="form-control" type="number"  aria-label="Sisi A" id="sideA" name="sideA" required>
+
+            <label for="sideB">Side B:</label>
+            <input class="form-control" type="number" aria-label="Sisi B" id="sideB" name="sideB" required>
+
+            <label for="sideC">Side C:</label>
+            <input class="form-control" type="number"  aria-label="Sisi C" id="sideC" name="sideC" required>
+
+            <!-- Buttons for calculating and resetting -->
+            
+            <div class="d-grid gap-2 col-6 mx-auto mt-3">
+              <button type="button" onclick="hitungKeliling()" class="btn btn-success">Hitung</button>
+            </div>
+          </form>
+
+        <!-- Display result or no result message -->
+      </div>
+    </div>
+
+
+    <div id="luasContent">
+      <div class="text-center">
+        <h1>Luas Segitiga</h1>
+        <img src="segitiga.png" class="rounded m-3" alt="..." width=100>
+      </div>
+      <p>Rumus kluas segitiga adalah </p>
+      <h5 class="text-center">L = 1/2 x a x t</h5>
+      <p>Dimana</p>
+      <p>L = Luas</p>
+      <p>a = Panjang alas</p>
+      <p>t = Tinggi</p>
+      
+      <div class="calculator">
+        <!-- Your calculator form goes here -->
+        <form>
+          <!-- Input fields for triangle dimensions -->
+          <label for="inputAlas">Alas :</label>
+          <input class="form-control" type="number" aria-label="Sisi A" id="inputAlas" name="inputAlas" required>
+
+          <label for="inputTinggi">Tinggi:</label>
+          <input class="form-control" type="number" aria-label="Sisi B" id="inputTinggi" name="inputTinggi" required>
+
+
+          <!-- Buttons for calculating and resetting -->
+          
+          <div class="d-grid gap-2 col-6 mx-auto mt-3">
+            <button type="button" onclick="hitungLuas()" class="btn btn-success">Hitung</button>
+          </div>
+        </form>
+
+      <!-- Display result or no result message -->
+      
+    </div>
+    
+  </div>
+  <div class="text-center mt-3">
+    <h3 id="hasil"></h3>
+  </div>
+</main>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
